@@ -1,0 +1,66 @@
+<%- include('partials/header') -%>
+
+<div class="container mt-5">
+  <h1>Register</h1>
+
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-body">
+
+          <!-- Makes POST request to /register route -->
+          <form action="/register" method="POST">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" name="username">
+            </div>
+            <div class="form-group">
+              <label for="email">fullName</label>
+              <input type="text" class="form-control" name="fullName">
+            </div>
+            <div class="form-group">
+              <label for="email">organization</label>
+              <input type="text" class="form-control" name="organization">
+            </div>
+            <div class="form-group">
+              <label for="email">date</label>
+              <input type="date" class="form-control" name="date">
+            </div>
+            <div class="form-group">
+              <label for="password">numberOfPeople</label>
+              <input type="number" class="form-control" name="numberOfPeople">
+            </div>
+            <button type="submit" class="btn btn-dark">Register</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="col-sm-4">
+      <div class="card social-block">
+        <div class="card-body">
+          <a class="btn btn-block" href="/auth/google" role="button">
+            <i class="fab fa-google"></i>
+            Sign Up with Google
+          </a>
+        </div>
+      </div>
+    </div> -->
+
+    <p>Choose your favorite Web language:</p>
+
+<form>
+  <input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">HTML</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">CSS</label><br>
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+  <label for="javascript">JavaScript</label>
+</form>
+
+  </div>
+</div>
+
+
+<%- include('partials/footer') -%>

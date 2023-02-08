@@ -1,0 +1,467 @@
+<%- include('partials/header') -%>
+
+
+    <!-- Hero Section Begin -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="hero-text">
+                        <h1>A PLACE OF REMEMBRANCE & LEARNING</h1>
+                        <p>Remember - Unite - Renew </p>
+                        <!-- <p>This App Contains Information about 7 Genocide memorials against Tutsi.</p>
+                        <p>
+                          You can use this app to learn the history of the Genocide and book visit on the memorial site
+                        </p> -->
+                        <a href="memorials/booking" class="primary-btn">Booking Now</a>
+                    </div>
+                </div>
+                <!-- <div class="col-xl-4 col-lg-5 offset-xl-2 offset-lg-1">
+                    <div class="booking-form">
+                        <h3>Booking Form</h3>
+                        <form action="/register" method="post">
+                          <div class="select-option" name ="memorialSite">
+                              <label for="room" name ="memorialSite">Memorial Site:</label>
+                              <select id="room" name ="memorialSite">
+
+                                <% memorials.forEach(function(memorial){ %>
+                                  <option name ="memorialSite" value="<%=memorial._id%>"><%=memorial.name%></option>
+
+                                <% }) %>
+
+                              </select>
+                          </div>
+                            <div class="check-date" name="date" >
+                                <label for="date-in" name="date">Date:</label>
+                                <input type="text" class="date-input" id="date-in" name="date">
+                                <i class="icon_calendar"></i>
+                            </div>
+                            <div class="check-date">
+                                <label for="date-out">Organization:</label>
+                                <input type="text" name="organization">
+                                <i class="icon_email"></i>
+                            </div>
+                            <div class="check-date">
+                                <label for="date-out">Your Name:</label>
+                                <input type="text" name="fullName">
+                                <i class="icon_email"></i>
+                            </div>
+                            <div class="check-date">
+                                <label for="date-out">Email:</label>
+                                <input type="email" name="email">
+                                <i class="icon_email"></i>
+                            </div>
+                            <div class="check-date">
+                                <label for="guest" name="numberOfPeople">Number of Visitors:</label>
+                                <input type="number" name="numberOfPeople">
+
+                            </div>
+                            <div class="check-date">
+                                <label for="date-out">Special Requierements:</label>
+                                <input type="text" name="requirement">
+
+                            </div>
+
+                            <button type="submit">Check Availability</button>
+                        </form>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="hero-slider owl-carousel">
+            <div class="hs-item set-bg" data-setbg="img/hero/hero-1.jpeg"></div>
+            <div class="hs-item set-bg" data-setbg="img/hero/hero-2.jpeg"></div>
+            <div class="hs-item set-bg" data-setbg="img/hero/hero-3.jpg"></div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- About Us Section Begin -->
+    <section class="aboutus-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about-text">
+                        <div class="section-title">
+                            <span>About</span>
+                            <h2>MINUBUMWE <br />Application</h2>
+                        </div>
+                        <p class="f-para">This Application is managed By MINUBUMWE with the intent to teach the history of Genocide
+                          against Tusti and to allow potential visitors from Around the word to book for their visits on the memorial sites</p>
+                        <p class="s-para">It contains information of 7 genocide memorial sites: <i>Nyamata,Ntarama,Nyarubuye,Murambi,Bisesero,Nyange and Rebero </i></p>
+                        <p class="s-para">If you would like to visit in a large group or to arrange a guided tour as an individual, please use the booking form.</p>
+                        <a href="memorials/booking" class="primary-btn about-btn">Book Now</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-pic">
+                        <div class="row">
+                            <!-- <div class="col-sm-6">
+                                <img src="img/about/about-1.jpg" alt="">
+                            </div> -->
+                            <div class="col-sm-12">
+                                <img src="img/about/about-2.jpeg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Us Section End -->
+
+    <!-- Services Section End -->
+    <section class="services-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>Genocide Memorial Sites</span>
+                        <!-- <h2>Discover Our Services</h2> -->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+              <% memorials.forEach(function(memorial){ %>
+              <div class="col-lg-4 col-sm-6">
+
+                  <div class="service-item">
+                      <!-- <i class="flaticon-033-dinner"></i> -->
+                      <h4><%=memorial.name%></h4>
+                      <p> <%=memorial.description.substring(0, 300) + " ..."%> </p>
+                      <a href="/<%=memorial._id%>" class="bk-btn">Discover More </a>
+                  </div>
+            </div>
+              <% }) %>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section End -->
+
+    <!-- Home Room Section Begin -->
+    <section class="hp-room-section">
+        <div class="container-fluid">
+            <div class="hp-room-items">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="hp-room-item set-bg" data-setbg="img/room/room-b1.jpg">
+                            <!-- <div class="hr-text">
+                                <h3>Double Room</h3>
+                                <h2>199$<span>/Pernight</span></h2>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td class="r-o">Size:</td>
+                                            <td>30 ft</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Capacity:</td>
+                                            <td>Max persion 5</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Bed:</td>
+                                            <td>King Beds</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Services:</td>
+                                            <td>Wifi, Television, Bathroom,...</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <a href="#" class="primary-btn">More Details</a>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="hp-room-item set-bg" data-setbg="img/room/room-b2.jpeg">
+                            <!-- <div class="hr-text">
+                                <h3>Premium King Room</h3>
+                                <h2>159$<span>/Pernight</span></h2>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td class="r-o">Size:</td>
+                                            <td>30 ft</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Capacity:</td>
+                                            <td>Max persion 5</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Bed:</td>
+                                            <td>King Beds</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Services:</td>
+                                            <td>Wifi, Television, Bathroom,...</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <a href="#" class="primary-btn">More Details</a>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="hp-room-item set-bg" data-setbg="img/room/room-b3.jpeg">
+                            <!-- <div class="hr-text">
+                                <h3>Deluxe Room</h3>
+                                <h2>198$<span>/Pernight</span></h2>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td class="r-o">Size:</td>
+                                            <td>30 ft</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Capacity:</td>
+                                            <td>Max persion 5</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Bed:</td>
+                                            <td>King Beds</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Services:</td>
+                                            <td>Wifi, Television, Bathroom,...</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <a href="#" class="primary-btn">More Details</a>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="hp-room-item set-bg" data-setbg="img/room/room-b4.jpeg">
+                            <!-- <div class="hr-text">
+                                <h3>Family Room</h3>
+                                <h2>299$<span>/Pernight</span></h2>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td class="r-o">Size:</td>
+                                            <td>30 ft</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Capacity:</td>
+                                            <td>Max persion 5</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Bed:</td>
+                                            <td>King Beds</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Services:</td>
+                                            <td>Wifi, Television, Bathroom,...</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <a href="#" class="primary-btn">More Details</a>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="hp-room-item set-bg" data-setbg="img/room/room-b5.jpeg">
+                            <!-- <div class="hr-text">
+                                <h3>Double Room</h3>
+                                <h2>199$<span>/Pernight</span></h2>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td class="r-o">Size:</td>
+                                            <td>30 ft</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Capacity:</td>
+                                            <td>Max persion 5</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Bed:</td>
+                                            <td>King Beds</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Services:</td>
+                                            <td>Wifi, Television, Bathroom,...</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <a href="#" class="primary-btn">More Details</a>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="hp-room-item set-bg" data-setbg="img/room/room-b6.jpeg">
+                            <!-- <div class="hr-text">
+                                <h3>Premium King Room</h3>
+                                <h2>159$<span>/Pernight</span></h2>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td class="r-o">Size:</td>
+                                            <td>30 ft</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Capacity:</td>
+                                            <td>Max persion 5</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Bed:</td>
+                                            <td>King Beds</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Services:</td>
+                                            <td>Wifi, Television, Bathroom,...</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <a href="#" class="primary-btn">More Details</a>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="hp-room-item set-bg" data-setbg="img/room/room-b7.jpg">
+                            <!-- <div class="hr-text">
+                                <h3>Deluxe Room</h3>
+                                <h2>198$<span>/Pernight</span></h2>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td class="r-o">Size:</td>
+                                            <td>30 ft</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Capacity:</td>
+                                            <td>Max persion 5</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Bed:</td>
+                                            <td>King Beds</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Services:</td>
+                                            <td>Wifi, Television, Bathroom,...</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <a href="#" class="primary-btn">More Details</a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Home Room Section End -->
+
+    <!-- Testimonial Section Begin -->
+    <section class="testimonial-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>Testimonials</span>
+                        <h2>What Visitors Say?</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="testimonial-slider owl-carousel">
+                        <div class="ts-item">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <div class="ti-author">
+                                <!-- <div class="rating">
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star-half_alt"></i>
+                                </div> -->
+                                <h5> - Alexander Vasquez</h5>
+                            </div>
+                            <img src="img/testimonial-logo.jpg" alt="">
+                        </div>
+                        <div class="ts-item">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <div class="ti-author">
+                                <!-- <div class="rating">
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star-half_alt"></i>
+                                </div> -->
+                                <h5> - Alexander Vasquez</h5>
+                            </div>
+                            <img src="img/testimonial-logo.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial Section End -->
+
+    <!-- Blog Section Begin -->
+    <!-- <section class="blog-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>Hotel News</span>
+                        <h2>Our Blog & Event</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="blog-item set-bg" data-setbg="img/blog/blog-1.jpg">
+                        <div class="bi-text">
+                            <span class="b-tag">Travel Trip</span>
+                            <h4><a href="#">Tremblant In Canada</a></h4>
+                            <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2019</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="blog-item set-bg" data-setbg="img/blog/blog-2.jpg">
+                        <div class="bi-text">
+                            <span class="b-tag">Camping</span>
+                            <h4><a href="#">Choosing A Static Caravan</a></h4>
+                            <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2019</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="blog-item set-bg" data-setbg="img/blog/blog-3.jpg">
+                        <div class="bi-text">
+                            <span class="b-tag">Event</span>
+                            <h4><a href="#">Copper Canyon</a></h4>
+                            <div class="b-time"><i class="icon_clock_alt"></i> 21th April, 2019</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="blog-item small-size set-bg" data-setbg="img/blog/blog-wide.jpg">
+                        <div class="bi-text">
+                            <span class="b-tag">Event</span>
+                            <h4><a href="#">Trip To Iqaluit In Nunavut A Canadian Arctic City</a></h4>
+                            <div class="b-time"><i class="icon_clock_alt"></i> 08th April, 2019</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="blog-item small-size set-bg" data-setbg="img/blog/blog-10.jpg">
+                        <div class="bi-text">
+                            <span class="b-tag">Travel</span>
+                            <h4><a href="#">Traveling To Barcelona</a></h4>
+                            <div class="b-time"><i class="icon_clock_alt"></i> 12th April, 2019</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- Blog Section End -->
+
+
+<%- include('partials/footer') -%>

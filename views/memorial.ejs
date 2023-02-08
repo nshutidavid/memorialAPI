@@ -1,0 +1,294 @@
+
+<%- include('partials/header') -%>
+<!-- Breadcrumb Section Begin -->
+<div class="breadcrumb-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb-text">
+                    <h2>Genocide Memorials against Tutsi </h2>
+                    <div class="bt-option">
+                        <a href="./home.html">Site</a>
+                        <span><%= memorialTitle %></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumb Section End -->
+
+<!-- Room Details Section Begin -->
+<section class="room-details-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="room-details-item">
+                    <img src="img/room/room-details.jpg" alt="">
+                    <div class="rd-text">
+                        <div class="rd-title">
+                            <h3><%= memorialTitle %></h3>
+                            <div class="rdt-right">
+                                <!-- <div class="rating">
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star-half_alt"></i>
+                                </div> -->
+                                <a href="memorials/booking">Booking Now</a>
+                            </div>
+                        </div>
+                        <!-- <h2>159$<span>/Pernight</span></h2> -->
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="r-o">Built:</td>
+                                    <td><%= builtDay %></td>
+                                </tr>
+                                <tr>
+                                    <td class="r-o">Victims:</td>
+                                    <td><%= numberOfVictims %></td>
+                                </tr>
+                                <!-- <tr>
+                                    <td class="r-o">Bed:</td>
+                                    <td>King Beds</td>
+                                </tr>
+                                <tr>
+                                    <td class="r-o">Services:</td>
+                                    <td>Wifi, Television, Bathroom,...</td>
+                                </tr> -->
+                            </tbody>
+                        </table>
+                        <p class="f-para"><%= memorialDescription %></p>
+                        <p>                        </p>
+                    </div>
+
+                </div>
+                <!-- <div class="rd-reviews">
+                    <h4>Reviews</h4>
+                    <div class="review-item">
+                        <div class="ri-pic">
+                            <img src="img/room/avatar/avatar-1.jpg" alt="">
+                        </div>
+                        <div class="ri-text">
+                            <span>27 Aug 2019</span>
+                            <div class="rating">
+                                <i class="icon_star"></i>
+                                <i class="icon_star"></i>
+                                <i class="icon_star"></i>
+                                <i class="icon_star"></i>
+                                <i class="icon_star-half_alt"></i>
+                            </div>
+                            <h5>Brandon Kelley</h5>
+                            <p>Neque porro qui squam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+                                adipisci velit, sed quia non numquam eius modi tempora. incidunt ut labore et dolore
+                                magnam.</p>
+                        </div>
+                    </div>
+                    <div class="review-item">
+                        <div class="ri-pic">
+                            <img src="img/room/avatar/avatar-2.jpg" alt="">
+                        </div>
+                        <div class="ri-text">
+                            <span>27 Aug 2019</span>
+                            <div class="rating">
+                                <i class="icon_star"></i>
+                                <i class="icon_star"></i>
+                                <i class="icon_star"></i>
+                                <i class="icon_star"></i>
+                                <i class="icon_star-half_alt"></i>
+                            </div>
+                            <h5>Brandon Kelley</h5>
+                            <p>Neque porro qui squam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+                                adipisci velit, sed quia non numquam eius modi tempora. incidunt ut labore et dolore
+                                magnam.</p>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="review-add">
+                    <h4>Add Review</h4>
+                    <form action="#" class="ra-form">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <input type="text" placeholder="Name*">
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="text" placeholder="Email*">
+                            </div>
+                            <div class="col-lg-12">
+                                <!-- <div>
+                                    <h5>You Rating:</h5>
+                                    <div class="rating">
+                                        <i class="icon_star"></i>
+                                        <i class="icon_star"></i>
+                                        <i class="icon_star"></i>
+                                        <i class="icon_star"></i>
+                                        <i class="icon_star-half_alt"></i>
+                                    </div>
+                                </div> -->
+                                <textarea placeholder="Your Review"></textarea>
+                                <button type="submit">Submit Now</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="room-booking">
+                    <h3>Your Reservation</h3>
+                    <form action="#">
+                        <div class="check-date">
+                            <label for="date-in">Check In:</label>
+                            <input type="text" class="date-input" id="date-in">
+                            <i class="icon_calendar"></i>
+                        </div>
+                        <div class="check-date">
+                            <label for="date-out">Name:</label>
+                            <input type="text" >
+                            <!-- <i class="icon_calendar"></i> -->
+                        </div>
+                        <div class="select-option">
+                            <label for="guest">Visitors:</label>
+                            <select id="guest">
+                                <option value="">1 - 10 </option>
+                                <option value="">10 - 30</option>
+                                <option value="">30 - 50</option>
+                                <option value=""> 50+ </option>
+
+                            </select>
+                        </div>
+                        <div class="select-option">
+                            <label for="room">Memorial Site:</label>
+                            <select id="room">
+                                <option value=""><%= memorialTitle %></option>
+                            </select>
+                        </div>
+                        <div class="select-option">
+                            <label for="room">Special Requirements::</label>
+                            <select id="room">
+                                <option value="">No</option>
+                                <option value="">Photos & Videos</option>
+                            </select>
+                        </div>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Room Details Section End -->
+<!-- Video Section Begin -->
+<section class="video-section set-bg" data-setbg="img/video-bg.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="video-text">
+                    <h2>Discover more about <%= memorialTitle %> .</h2>
+                    <p>Watch Here!</p>
+                    <a href=" <%= youtubeLink %>" class="play-btn video-popup"><img
+                            src="img/play.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Video Section End -->
+
+<!-- Gallery Section Begin -->
+<section class="gallery-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <span>Our Gallery</span>
+                    <h2>Inside <%= memorialTitle %>  </h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="gallery-item set-bg" data-setbg="img/gallery/gallery-1.jpeg">
+                    <div class="gi-text">
+                        <h3><%= memorialTitle %></h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="gallery-item set-bg" data-setbg="img/gallery/gallery-3.jpeg">
+                            <div class="gi-text">
+                                <h3><%= memorialTitle %></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="gallery-item set-bg" data-setbg="img/gallery/gallery-4.jpeg">
+                            <div class="gi-text">
+                                <h3><%= memorialTitle %></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="gallery-item large-item set-bg" data-setbg="img/gallery/gallery-2.jpeg">
+                    <div class="gi-text">
+                        <h3><%= memorialTitle %></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Gallery Section End -->
+
+
+<!-- Contact Section Begin -->
+<section class="contact-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="contact-text">
+                    <h2>Contact Info</h2>
+                    <p>Use the addresses below to contact the team to book or find out more about the memorial’s Remembrance and Learning Tours for visitors, students and teachers.</p>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="c-o">Address:</td>
+                                <td><%= memorialAddress %></td>
+                            </tr>
+                            <tr>
+                                <td class="c-o">Phone:</td>
+                                <td><%= memorialPhone %></td>
+                            </tr>
+                            <tr>
+                                <td class="c-o">Email:</td>
+                                <td><%= memorialEmail %></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-lg-7 offset-lg-1">
+              <div class="map">
+                  <iframe
+                      src="<%= googleMapMemorial %>"
+                      height="470" style="border:0;" allowfullscreen=""></iframe>
+              </div>
+            </div>
+        </div>
+        <!-- <div class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.0606825994123!2d-72.8735845851828!3d40.760690042573295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e85b24c9274c91%3A0xf310d41b791bcb71!2sWilliam%20Floyd%20Pkwy%2C%20Mastic%20Beach%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1578582744646!5m2!1sen!2sbd"
+                height="470" style="border:0;" allowfullscreen=""></iframe>
+        </div> -->
+    </div>
+</section>
+<!-- Contact Section End -->
+
+
+
+<%- include('partials/footer') -%>

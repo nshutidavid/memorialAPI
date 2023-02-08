@@ -1,0 +1,69 @@
+<%- include('partials/header') -%>
+
+<section class="room-details-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+
+
+                <div class="review-add">
+                    <h4>Book a visit </h4>
+                    <form action="/booking" method="post" class="ra-form">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <input type="text" placeholder="Name*" name="fullName">
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="text" placeholder="Email*" name="email">
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="text" placeholder="Organization"name="organization">
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="date" placeholder="Date*" name="date">
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="number" placeholder="Number of Visitors"name="numberOfPeople">
+                            </div>
+                            <div class="col-lg-6">
+                                <!-- <input type="text" placeholder="Genocide Memorial site*" name="memorialSite"> -->
+                                <select id="room" name ="memorialSite">
+
+                                  <% memorials.forEach(function(memorial){ %>
+                                    <option placeholder="Genocide Memorial site*" name ="memorialSite" value="<%=memorial%>"><%=memorial.name%></option>
+
+                                  <% }) %>
+
+                                </select>
+
+                            </div>
+                            <div class="col-lg-12">
+                                <div>
+                                    <h5>Fill in any requirement:</h5>
+                                    <div class="rating">
+                                        <!-- <i class="icon_star"></i>
+                                        <i class="icon_star"></i>
+                                        <i class="icon_star"></i>
+                                        <i class="icon_star"></i>
+                                        <i class="icon_star-half_alt"></i> -->
+                                    </div>
+                                </div>
+                                <textarea placeholder="Special Requirements?" name="requirement"></textarea>
+                                <button type="submit">Submit Now</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- <div class="col-lg-4">
+                <div class="room-booking">
+                    <h3>Your Reservation</h3>
+
+                </div>
+            </div> -->
+        </div>
+    </div>
+</section>
+
+
+<%- include('partials/footer') -%>
